@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import dphome from '../Assests/dp_home.jpeg'
 
 export default function Hero() {
   const [isVisible, setIsVisible] = useState(false)
@@ -268,7 +269,7 @@ export default function Hero() {
             }}
           >
                 <img 
-                  src="./src/Assests/dp_home.jpeg" 
+                  src={dphome} 
                   alt="Abhijith S" 
                   style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 />
