@@ -38,22 +38,29 @@ export default function Navbar() {
     return () => observer.disconnect()
   }, [])
 
+  // Track which section is active using IntersectionObserver instead of a
+  // scroll listener that reads getBoundingClientRect() — the old approach
+  // forced a synchronous layout recalculation on every scroll frame, which
+  // shows up as "Forced reflow" / long main-thread tasks in Lighthouse.
   useEffect(() => {
-    const onScroll = () => {
-      const sections = NAV_LINKS.map(link => link.href.substring(1))
-      for (const section of sections) {
-        const element = document.getElementById(section)
-        if (element) {
-          const rect = element.getBoundingClientRect()
-          if (rect.top <= 100 && rect.bottom >= 100) {
-            setActiveSection(section)
-            break
-          }
+    const sections = NAV_LINKS
+      .map(link => document.getElementById(link.href.substring(1)))
+      .filter(Boolean)
+    if (sections.length === 0) return
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        // Pick the entry closest to the "100px from top" activation line
+        // among those currently intersecting, matching the old behavior.
+        const visible = entries.filter(e => e.isIntersecting)
+        if (visible.length > 0) {
+          setActiveSection(visible[0].target.id)
         }
-      }
-    }
-    window.addEventListener('scroll', onScroll)
-    return () => window.removeEventListener('scroll', onScroll)
+      },
+      { rootMargin: '-100px 0px -70% 0px', threshold: 0 }
+    )
+    sections.forEach(section => observer.observe(section))
+    return () => observer.disconnect()
   }, [])
 
   return (
