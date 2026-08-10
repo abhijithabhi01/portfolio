@@ -1,7 +1,12 @@
 import { useState, useEffect } from 'react'
-import dphome480 from '../Assests/dp_home_480.webp'
-import dphome800 from '../Assests/dp_home_800.webp'
-import dphomeFallback from '../Assests/dp_home_fallback.jpeg'
+// Served from public/ with stable filenames (not hashed by Vite) so these
+// URLs exactly match the <link rel="preload"> hints in index.html — that's
+// what makes the browser treat the preload and the actual image request as
+// the same resource, which is required for the LCP image to be discoverable
+// in the initial document instead of only after React renders.
+const dphome480 = '/dp_home_480.webp'
+const dphome800 = '/dp_home_800.webp'
+const dphomeFallback = '/dp_home_fallback.jpeg'
 
 export default function Hero() {
   const [isVisible, setIsVisible] = useState(false)
