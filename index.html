@@ -2,14 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/src/Assests/logo.jpg" />
+    <link rel="icon" type="image/jpeg" href="/logo.jpg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="google-site-verification" content="TqjbelaCRKeMkVst_C0TQiHbqzM3SUmhEp9ls8Z6Xxo" />
     <meta name="google-site-verification" content="BLzkXDvrEclPUJ5mEktS7FvXG8jiOAhsR1QhPG7MuDs" />
     
     <!-- SEO: Title & Core Meta -->
-    <title>Abhijith Sreekumar | Full-Stack Developer & AI Engineer | Bengaluru</title>
-    <meta name="description" content="Abhijith Sreekumar — Full-Stack Developer at Susima Smaart Solutions, MCA graduate, MERN developer and agentic AI engineer based in Bengaluru. Previously AI Intern at 10xDS." />
+    <title>Abhijith Sreekumar | Full-Stack Developer & AI Engineer</title>
+    <meta name="description" content="Abhijith Sreekumar — Full-Stack Developer & MERN/agentic AI engineer at Susima Smaart Solutions, Bengaluru. MCA graduate." />
     <meta name="author" content="Abhijith Sreekumar" />
     <meta name="keywords" content="Abhijith Sreekumar, MERN developer Bengaluru, AI engineer Bengaluru, full stack developer, agentic AI, React developer Karnataka, Susima Smaart Solutions" />
     <link rel="canonical" href="https://abhijithsreekumar.vercel.app/" />
@@ -34,6 +34,8 @@
     <meta name="twitter:description" content="Full-Stack Developer at Susima Smaart Solutions. MERN developer and agentic AI engineer based in Bengaluru." />
     <meta name="twitter:image" content="https://abhijithsreekumar.vercel.app/og-image.jpg" />
     <meta name="twitter:image:alt" content="Abhijith Sreekumar — Full-Stack Developer & AI Engineer" />
+    <meta name="twitter:site" content="@YOUR_TWITTER_HANDLE" />
+    <meta name="twitter:creator" content="@YOUR_TWITTER_HANDLE" />
 
     <!-- JSON-LD Person Schema -->
     <script type="application/ld+json">
@@ -135,9 +137,22 @@
     }
     </script>
 
+    <!-- SpeakableSpecification — tells voice assistants which text to read aloud -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfilePage",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": ["#noscript-about"]
+      },
+      "url": "https://abhijithsreekumar.vercel.app/"
+    }
+    </script>
+
     <!-- LCP image preload — tells browser to fetch hero image immediately -->
-    <link rel="preload" as="image" href="/src/Assests/dp_home_480.webp" type="image/webp" media="(max-width: 640px)">
-    <link rel="preload" as="image" href="/src/Assests/dp_home_800.webp" type="image/webp" media="(min-width: 641px)">
+    <link rel="preload" as="image" href="/dp_home_480.webp" type="image/webp" media="(max-width: 640px)">
+    <link rel="preload" as="image" href="/dp_home_800.webp" type="image/webp" media="(min-width: 641px)">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- Non-render-blocking font load -->
@@ -145,7 +160,42 @@
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&family=Syne:wght@700;800&display=swap"></noscript>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <!--
+        Fallback content for crawlers/engines that do not execute JavaScript
+        (many AI-answer-engine crawlers, including some used by Perplexity
+        and ChatGPT Search, fall in this category). React replaces this
+        entire block on hydration, so human visitors never see it — but it
+        gives non-JS crawlers real, citable body text instead of an empty
+        shell, addressing the "body content invisible to crawlers" gap.
+      -->
+      <div id="noscript-about" style="max-width:700px;margin:2rem auto;padding:1rem;font-family:sans-serif;line-height:1.6;">
+        <h1>Abhijith Sreekumar — Full-Stack Developer &amp; AI Engineer</h1>
+        <p>
+          Abhijith Sreekumar is a Full-Stack Developer at Susima Smaart Solutions
+          and an agentic AI engineer based in Bengaluru, Karnataka, India. He is an
+          MCA graduate who previously worked as an AI Intern at 10xDS, building
+          enterprise-grade agentic AI workflows with LLMs and Google Cloud Vertex AI.
+        </p>
+        <h2>Skills</h2>
+        <p>MERN stack (MongoDB, Express.js, React.js, Node.js), Python, agentic AI development, prompt engineering, LLM integration, and Google Cloud Platform.</p>
+        <h2>Projects</h2>
+        <ul>
+          <li>Account Research Agent — autonomous AI for B2B sales research</li>
+          <li>HIA (Health Insight Agent) — LLM-powered health Q&amp;A system</li>
+          <li>CredChain — blockchain-based academic credential verification</li>
+          <li>CareerVista — AI-powered career guidance platform</li>
+          <li>Home Service Provider — full-stack MERN application</li>
+        </ul>
+        <h2>Contact &amp; Links</h2>
+        <ul>
+          <li>Email: <a href="mailto:iamabhijithabhi01@gmail.com">iamabhijithabhi01@gmail.com</a></li>
+          <li><a href="https://www.linkedin.com/in/abhijithsreekumar-dev/">LinkedIn</a></li>
+          <li><a href="https://github.com/abhijithabhi01">GitHub</a></li>
+          <li><a href="https://dev.to/abhijith_sreekumar">dev.to</a></li>
+        </ul>
+      </div>
+    </div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
