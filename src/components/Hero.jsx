@@ -6,6 +6,7 @@ import { useState, useEffect } from 'react'
 // in the initial document instead of only after React renders.
 const dphome480 = '/dp_home_480.webp'
 const dphome800 = '/dp_home_800.webp'
+const dphome1200 = '/dp_home_1200.webp'
 const dphomeFallback = '/dp_home_fallback.jpeg'
 
 export default function Hero() {
@@ -269,7 +270,7 @@ export default function Hero() {
             <picture>
               <source
                 type="image/webp"
-                srcSet={`${dphome480} 480w, ${dphome800} 800w`}
+                srcSet={`${dphome480} 480w, ${dphome800} 800w, ${dphome1200} 1200w`}
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 500px"
               />
               <img
