@@ -124,7 +124,10 @@
     }
     </script>
 
-    <!-- WebSite Schema -->
+    <!-- WebSite Schema — speakable lives here instead of a standalone
+         ProfilePage type, since ProfilePage is validated by Google's Rich
+         Results Test against strict required fields (mainEntity, name) that
+         a personal portfolio doesn't need; WebSite has no such requirement. -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -135,20 +138,11 @@
       "author": {
         "@type": "Person",
         "name": "Abhijith Sreekumar"
-      }
-    }
-    </script>
-
-    <!-- SpeakableSpecification — tells voice assistants which text to read aloud -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ProfilePage",
+      },
       "speakable": {
         "@type": "SpeakableSpecification",
         "cssSelector": ["#hero-name", "#about"]
-      },
-      "url": "https://abhijithsreekumar.vercel.app/"
+      }
     }
     </script>
 
