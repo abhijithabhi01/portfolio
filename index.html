@@ -28,7 +28,14 @@
     <meta property="og:image:alt" content="Abhijith Sreekumar — Full-Stack Developer & AI Engineer" />
     <meta property="og:locale" content="en_IN" />
 
-
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Abhijith Sreekumar | Full-Stack Developer & AI Engineer" />
+    <meta name="twitter:description" content="Full-Stack Developer at Susima Smaart Solutions. MERN developer and agentic AI engineer based in Bengaluru." />
+    <meta name="twitter:image" content="https://abhijithsreekumar.vercel.app/og-image.jpg" />
+    <meta name="twitter:image:alt" content="Abhijith Sreekumar — Full-Stack Developer & AI Engineer" />
+    <meta name="twitter:site" content="@YOUR_TWITTER_HANDLE" />
+    <meta name="twitter:creator" content="@YOUR_TWITTER_HANDLE" />
 
     <!-- JSON-LD Person Schema -->
     <script type="application/ld+json">
@@ -37,7 +44,7 @@
       "@type": "Person",
       "name": "Abhijith Sreekumar",
       "url": "https://abhijithsreekumar.vercel.app/",
-      "image": "https://abhijithsreekumar.vercel.app/og-image.jpg",
+      "image": "https://abhijithsreekumar.vercel.app/dp_home_800.webp",
       "jobTitle": "Full-Stack Developer & AI Engineer",
       "description": "Full-Stack Developer at Susima Smaart Solutions. MCA graduate specializing in MERN stack and agentic AI systems. Previously built enterprise AI agents at 10xDS.",
       "email": "iamabhijithabhi01@gmail.com",
@@ -62,7 +69,7 @@
         "https://dev.to/abhijith_sreekumar",
         "https://hashnode.com/@abhijithsreekumar",
         "https://about.me/abhijithsreekumar",
-        "https://facebook.com/share/1D78GcmYhs",
+        "https://facebook.com/share/1D78GcmYhs/"
       ]
     }
     </script>
@@ -139,7 +146,7 @@
       "@type": "ProfilePage",
       "speakable": {
         "@type": "SpeakableSpecification",
-        "cssSelector": ["#noscript-about"]
+        "cssSelector": ["#hero-name", "#about"]
       },
       "url": "https://abhijithsreekumar.vercel.app/"
     }
@@ -155,15 +162,17 @@
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&family=Syne:wght@700;800&display=swap"></noscript>
   </head>
   <body>
-    <div id="root">
-      <!--
-        Fallback content for crawlers/engines that do not execute JavaScript
-        (many AI-answer-engine crawlers, including some used by Perplexity
-        and ChatGPT Search, fall in this category). React replaces this
-        entire block on hydration, so human visitors never see it — but it
-        gives non-JS crawlers real, citable body text instead of an empty
-        shell, addressing the "body content invisible to crawlers" gap.
-      -->
+    <div id="root"></div>
+    <!--
+      Real <noscript> fallback for crawlers/engines that do not execute
+      JavaScript (many AI-answer-engine crawlers, including some used by
+      Perplexity and ChatGPT Search, fall in this category). Browsers with
+      JavaScript enabled never parse or paint <noscript> content at all —
+      that's what removes the flash human visitors used to see before React
+      mounted. Non-JS crawlers still receive this exact text as real,
+      citable body content.
+    -->
+    <noscript>
       <div id="noscript-about" style="max-width:700px;margin:2rem auto;padding:1rem;font-family:sans-serif;line-height:1.6;">
         <h1>Abhijith Sreekumar — Full-Stack Developer &amp; AI Engineer</h1>
         <p>
@@ -190,7 +199,7 @@
           <li><a href="https://dev.to/abhijith_sreekumar">dev.to</a></li>
         </ul>
       </div>
-    </div>
+    </noscript>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
