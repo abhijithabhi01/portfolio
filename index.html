@@ -6,15 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="google-site-verification" content="TqjbelaCRKeMkVst_C0TQiHbqzM3SUmhEp9ls8Z6Xxo" />
     <meta name="google-site-verification" content="BLzkXDvrEclPUJ5mEktS7FvXG8jiOAhsR1QhPG7MuDs" />
-    
+
     <!-- SEO: Title & Core Meta -->
-    <title>Abhijith Sreekumar | Full-Stack Developer & AI Engineer</title>
+    <!-- FIX 1: Added | Bengaluru to title -->
+    <title>Abhijith Sreekumar | Full-Stack Developer & AI Engineer | Bengaluru</title>
     <meta name="description" content="Abhijith Sreekumar — Full-Stack Developer & MERN/agentic AI engineer at Susima Smaart Solutions, Bengaluru. MCA graduate." />
     <meta name="author" content="Abhijith Sreekumar" />
     <meta name="keywords" content="Abhijith Sreekumar, MERN developer Bengaluru, AI engineer Bengaluru, full stack developer, agentic AI, React developer Karnataka, Susima Smaart Solutions" />
     <link rel="canonical" href="https://abhijithsreekumar.vercel.app/" />
     <meta name="msvalidate.01" content="044E040FF2D84CA9ACB86279D6553F00" />
-    
+
     <!-- Open Graph -->
     <meta property="og:title" content="Abhijith Sreekumar | Full-Stack Developer & AI Engineer" />
     <meta property="og:description" content="Full-Stack Developer at Susima Smaart Solutions. MERN developer and agentic AI engineer based in Bengaluru, Karnataka." />
@@ -30,13 +31,12 @@
     <meta property="og:locale" content="en_IN" />
 
     <!-- Twitter Card -->
+    <!-- FIX 2: Removed @YOUR_TWITTER_HANDLE placeholder lines -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Abhijith Sreekumar | Full-Stack Developer & AI Engineer" />
     <meta name="twitter:description" content="Full-Stack Developer at Susima Smaart Solutions. MERN developer and agentic AI engineer based in Bengaluru." />
     <meta name="twitter:image" content="https://abhijithsreekumar.vercel.app/og-image.jpg" />
     <meta name="twitter:image:alt" content="Abhijith Sreekumar — Full-Stack Developer & AI Engineer" />
-    <meta name="twitter:site" content="@YOUR_TWITTER_HANDLE" />
-    <meta name="twitter:creator" content="@YOUR_TWITTER_HANDLE" />
 
     <!-- JSON-LD Person Schema -->
     <script type="application/ld+json">
@@ -45,7 +45,12 @@
       "@type": "Person",
       "name": "Abhijith Sreekumar",
       "url": "https://abhijithsreekumar.vercel.app/",
-      "image": "https://abhijithsreekumar.vercel.app/dp_home_800.webp",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://abhijithsreekumar.vercel.app/dp_home_800.webp",
+        "width": 768,
+        "height": 1067
+      },
       "jobTitle": "Full-Stack Developer & AI Engineer",
       "description": "Full-Stack Developer at Susima Smaart Solutions. MCA graduate specializing in MERN stack and agentic AI systems. Previously built enterprise AI agents at 10xDS.",
       "email": "iamabhijithabhi01@gmail.com",
@@ -69,8 +74,7 @@
         "https://www.instagram.com/abhijith__sreekumar_",
         "https://dev.to/abhijith_sreekumar",
         "https://hashnode.com/@abhijithsreekumar",
-        "https://about.me/abhijithsreekumar",
-        "https://facebook.com/share/1D78GcmYhs/"
+        "https://about.me/abhijithsreekumar"
       ]
     }
     </script>
@@ -125,10 +129,7 @@
     }
     </script>
 
-    <!-- WebSite Schema — speakable lives here instead of a standalone
-         ProfilePage type, since ProfilePage is validated by Google's Rich
-         Results Test against strict required fields (mainEntity, name) that
-         a personal portfolio doesn't need; WebSite has no such requirement. -->
+    <!-- WebSite Schema with Speakable -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -147,7 +148,7 @@
     }
     </script>
 
-    <!-- LCP image preload — tells browser to fetch hero image immediately -->
+    <!-- LCP image preload -->
     <link rel="preload" as="image" href="/dp_home_480.webp" type="image/webp" media="(max-width: 640px)">
     <link rel="preload" as="image" href="/dp_home_800.webp" type="image/webp" media="(min-width: 641px)">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -157,16 +158,11 @@
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&family=Syne:wght@700;800&display=swap"></noscript>
   </head>
   <body>
+    <!-- FIX 4: Hidden H1 for crawlers — visually hidden, React renders its own visible H1 -->
+    <h1 style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;">
+      Abhijith Sreekumar — Full-Stack Developer &amp; AI Engineer | Bengaluru
+    </h1>
     <div id="root"></div>
-    <!--
-      Real <noscript> fallback for crawlers/engines that do not execute
-      JavaScript (many AI-answer-engine crawlers, including some used by
-      Perplexity and ChatGPT Search, fall in this category). Browsers with
-      JavaScript enabled never parse or paint <noscript> content at all —
-      that's what removes the flash human visitors used to see before React
-      mounted. Non-JS crawlers still receive this exact text as real,
-      citable body content.
-    -->
     <noscript>
       <div id="noscript-about" style="max-width:700px;margin:2rem auto;padding:1rem;font-family:sans-serif;line-height:1.6;">
         <h1>Abhijith Sreekumar — Full-Stack Developer &amp; AI Engineer</h1>
