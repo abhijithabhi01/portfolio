@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { SpeedInsights } from '@vercel/speed-insights/react'
 import Navbar from './components/Navbar'
 import ScrollToTop from './components/ScrollToTop'
 import Hero from './components/Hero'
@@ -53,6 +54,7 @@ export default function App() {
       <Contact />
       <Footer />
       <ScrollToTop />
+      <SpeedInsights />
     </div>
   )
 }
